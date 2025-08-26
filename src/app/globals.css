@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  /* Summer Friday inspired colors */
+  --color-neutral-50: rgb(249, 250, 250);
+  --color-neutral-100: rgb(244, 244, 245);
+  --color-neutral-200: rgb(228, 228, 231);
+  --color-neutral-300: rgb(212, 212, 216);
+  --color-neutral-700: rgb(68, 68, 73);
+  --color-neutral-800: rgb(39, 39, 42);
+  --color-neutral-900: rgb(24, 24, 27);
+  
+  /* Summer Friday Blue Gradient Colors */
+  --color-blue-400: rgb(96, 165, 250);
+  --color-blue-500: rgb(59, 130, 246);
+  --color-blue-600: rgb(37, 99, 235);
+  --color-blue-700: rgb(29, 78, 216);
+  
+  /* Font families */
+  --font-sombra: var(--font-sombra);
+  --font-inter: 'Inter', sans-serif;
+}
+
+.font-sombra {
+  font-family: var(--font-sombra);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+/* Custom utilities for Summer Friday aesthetic */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Marquee animation for client logos */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-animate {
+  animation: marquee 30s linear infinite;
+}
