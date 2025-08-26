@@ -21,6 +21,10 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   tags
 }`;
 
+const POSTS_QUERY = `*[_type == "post"]{
+  slug
+}`;
+
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) =>
   projectId && dataset
@@ -28,6 +32,19 @@ const urlFor = (source: SanityImageSource) =>
     : null;
 
 const options = { next: { revalidate: 30 } };
+
+export async function generateStaticParams() {
+  try {
+    const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY);
+    return posts.map((post) => ({
+      slug: post.slug.current,
+    }));
+  } catch (error) {
+    console.error('Error fetching posts for static generation:', error);
+    // Return empty array if no posts or error - this allows the build to succeed
+    return [];
+  }
+}
 
 export async function generateMetadata({
   params,
