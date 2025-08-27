@@ -11,16 +11,31 @@ const WorkflowSection = () => {
     <section className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         
-        {/* Section Header */}
+                {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
-          <Heading level="h2" className="mb-4">
+          <Heading level="h2" align="center" className="mb-4">
             AI Strategy and solutions that amplify your team
           </Heading>
           <Text size="base" align="center" color="secondary" className="max-w-4xl mx-auto">
             We help companies turn AI from hype into usable strategy — and then build the systems that make it real.
-          </Text>
+</Text>
         </div>
         
+        {/* Image Above Fortune500s Text */}
+        <div className="flex justify-center mb-8 lg:mb-12">
+          <div className="w-full max-w-lg rounded-lg overflow-hidden bg-white">
+            <div className="flex items-center justify-center p-2">
+              <Image
+                src="/image-14.png"
+                alt="AI Strategy Implementation"
+                width={500}
+                height={300}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* First Row - Text Left, Image Right */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 lg:mb-24">
           {/* Text Content */}
@@ -57,8 +72,8 @@ const WorkflowSection = () => {
             <div className="w-full h-96 rounded-lg overflow-hidden bg-white">
               <div className="flex items-center justify-center h-full p-2">
                 <Image
-                  src="/image-14.png"
-                  alt="Leverage proven practices from Fortune500s and progressive startups"
+                  src="/headshots1.png"
+                  alt="Professional team collaboration"
                   width={600}
                   height={400}
                   className="max-w-full max-h-full object-contain"
