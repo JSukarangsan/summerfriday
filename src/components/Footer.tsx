@@ -16,7 +16,7 @@ const Footer = () => {
             
             {/* AI-First Attribution */}
             <div className="mt-auto">
-              <Text size="base" color="white" className="max-w-4xl leading-relaxed">
+              <Text size="sm" color="white" className="max-w-4xl leading-relaxed">
                 This site was built using{' '}
                 <a href="https://claude.ai/chat" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors underline">
                   Claude Code
