@@ -21,25 +21,26 @@ const WorkflowSection = () => {
 </Text>
         </div>
         
-        {/* Image Above Fortune500s Text */}
-        <div className="flex justify-center mb-8 lg:mb-12">
-          <div className="w-full max-w-lg rounded-lg overflow-hidden bg-white">
-            <div className="flex items-center justify-center p-2">
-              <Image
-                src="/image-14.png"
-                alt="AI Strategy Implementation"
-                width={500}
-                height={300}
-                className="w-full h-auto object-contain"
-              />
+        {/* First Row - Text Left, Image Right (responsive: image above text on mobile) */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 lg:mb-24">
+          {/* Image - shows first on mobile, second on desktop */}
+          <div className="flex justify-center items-center lg:order-2">
+            <div className="w-full h-96 rounded-lg overflow-hidden bg-white">
+              <div className="flex items-center justify-center h-full p-2">
+                <Image
+                  src="/image-14.png"
+                  alt="AI Strategy Implementation"
+                  width={600}
+                  height={400}
+                  className="max-w-full max-h-full object-contain"
+                  priority
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* First Row - Text Left, Image Right */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 lg:mb-24">
-          {/* Text Content */}
-          <div className="flex flex-col gap-12">
+          {/* Text Content - shows second on mobile, first on desktop */}
+          <div className="flex flex-col gap-12 lg:order-1">
             {/* Header Section */}
             <div className="flex flex-col gap-6">
               <Heading level="h4" color="primary">
@@ -64,22 +65,6 @@ const WorkflowSection = () => {
               <Text size="base" color="secondary">
                 Systems designed to scale become long-term competitive advantage.
               </Text>
-            </div>
-          </div>
-
-          {/* Right side - Team Image */}
-          <div className="flex justify-center items-center">
-            <div className="w-full h-96 rounded-lg overflow-hidden bg-white">
-              <div className="flex items-center justify-center h-full p-2">
-                <Image
-                  src="/headshots1.png"
-                  alt="Professional team collaboration"
-                  width={600}
-                  height={400}
-                  className="max-w-full max-h-full object-contain"
-                  priority
-                />
-              </div>
             </div>
           </div>
         </div>
